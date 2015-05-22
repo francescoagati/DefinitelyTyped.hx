@@ -1,0 +1,33 @@
+extern class TypeScript.ASTHelpersTopLevel {
+	static function scriptIsElided(sourceUnit:SourceUnit):Bool;
+	static function moduleIsElided(declaration:ModuleDeclaration):Bool;
+	static function enumIsElided(declaration:EnumDeclaration):Bool;
+	static function isValidAstNode(ast:IASTSpan):Bool;
+	static function getAstAtPosition(script:AST, pos:Float, ?useTrailingTriviaAsLimChar:Bool, ?forceInclusive:Bool):AST;
+	static function getExtendsHeritageClause(clauses:ISyntaxList2):HeritageClause;
+	static function getImplementsHeritageClause(clauses:ISyntaxList2):HeritageClause;
+	static function isCallExpression(ast:AST):Bool;
+	static function isCallExpressionTarget(ast:AST):Bool;
+	static function isDeclarationASTOrDeclarationNameAST(ast:AST):Bool;
+	static function getEnclosingParameterForInitializer(ast:AST):Parameter;
+	static function getEnclosingMemberVariableDeclaration(ast:AST):MemberVariableDeclaration;
+	static function isNameOfFunction(ast:AST):Bool;
+	static function isNameOfMemberFunction(ast:AST):Bool;
+	static function isNameOfMemberAccessExpression(ast:AST):Bool;
+	static function isRightSideOfQualifiedName(ast:AST):Bool;
+	static function parentIsModuleDeclaration(ast:AST):Bool;
+	static function parametersFromIdentifier(id:Identifier):IParameters;
+	static function parametersFromParameter(parameter:Parameter):IParameters;
+	static function parametersFromParameterList(list:ParameterList):IParameters;
+	static function isDeclarationAST(ast:AST):Bool;
+	static function docComments(ast:AST):Array<Comment>;
+	static function getParameterList(ast:AST):ParameterList;
+	static function getType(ast:AST):AST;
+	static function getVariableDeclaratorModifiers(variableDeclarator:VariableDeclarator):Array<PullElementFlags>;
+	static function isIntegerLiteralAST(expression:AST):Bool;
+	static function getEnclosingModuleDeclaration(ast:AST):ModuleDeclaration;
+	static function getModuleDeclarationFromNameAST(ast:AST):ModuleDeclaration;
+	static function isLastNameOfModule(ast:ModuleDeclaration, astName:AST):Bool;
+	static function getNameOfIdenfierOrQualifiedName(name:AST):String;
+	static function getModuleNames(name:AST, ?result:Array<Identifier>):Array<Identifier>;
+}

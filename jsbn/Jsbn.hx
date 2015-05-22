@@ -1,0 +1,98 @@
+typedef RandomGenerator = {
+	function nextBytes(bytes:Array<Float>):Void;
+};
+extern class BigInteger {
+	@:overload(function(a:Float, b:Float, c:RandomGenerator):Void { })
+	@:overload(function(a:String, ?b:Float):Void { })
+	@:overload(function(a:Array<Float>, ?b:Float):Void { })
+	@:overload(function(a:BigInteger):Void { })
+	function new(a:Float, c:RandomGenerator):Void;
+	var s : Float;
+	var t : Float;
+	var data : Array<Float>;
+	var DB : Float;
+	var DM : Float;
+	var DV : Float;
+	var FV : Float;
+	var F1 : Float;
+	var F2 : Float;
+	function am(i:Float, x:Float, w:BigInteger, j:Float, c:Float, n:Float):Float;
+	function copyTo(r:BigInteger):Void;
+	function fromInt(x:Float):Void;
+	function fromString(x:String, b:Float):Void;
+	function clamp():Void;
+	function toString(?b:Float):String;
+	function negate():BigInteger;
+	function abs():BigInteger;
+	function compareTo(a:BigInteger):Float;
+	function bitLength():Float;
+	function dlShiftTo(n:Float, r:BigInteger):Void;
+	function drShiftTo(n:Float, r:BigInteger):Void;
+	function lShiftTo(n:Float, r:BigInteger):Void;
+	function rShiftTo(n:Float, r:BigInteger):Void;
+	function subTo(a:BigInteger, r:BigInteger):Void;
+	function multiplyTo(a:BigInteger, r:BigInteger):Void;
+	function squareTo(r:BigInteger):Void;
+	function divRemTo(m:BigInteger, q:BigInteger, r:BigInteger):Void;
+	function mod(a:BigInteger):BigInteger;
+	function invDigit():Float;
+	function isEven():Bool;
+	function exp(e:Float, z:Reduction):BigInteger;
+	function modPowInt(e:Float, m:BigInteger):BigInteger;
+	function clone():BigInteger;
+	function intValue():Float;
+	function byteValue():Float;
+	function shortValue():Float;
+	function chunkSize(r:Float):Float;
+	function signum():Float;
+	function toRadix(b:Float):String;
+	function fromRadix(s:String, b:Float):Void;
+	function fromNumber(a:Float, ?b:Float, ?c:Float):Void;
+	function toByteArray():Array<Float>;
+	function equals(a:BigInteger):Bool;
+	function min(a:BigInteger):BigInteger;
+	function max(a:BigInteger):BigInteger;
+	function bitwiseTo(a:BigInteger, op:Float -> Float -> Float, r:BigInteger):Void;
+	function and(a:BigInteger):BigInteger;
+	function or(a:BigInteger):BigInteger;
+	function xor(a:BigInteger):BigInteger;
+	function andNot(a:BigInteger):BigInteger;
+	function not():BigInteger;
+	function shiftLeft(n:Float):BigInteger;
+	function shiftRight(n:Float):BigInteger;
+	function getLowestSetBit():Float;
+	function bitCount():Float;
+	function testBit(n:Float):Bool;
+	function changeBit(n:Float, op:Float -> Float -> Float):BigInteger;
+	function setBit(n:Float):BigInteger;
+	function clearBit(n:Float):BigInteger;
+	function flipBit(n:Float):BigInteger;
+	function addTo(a:BigInteger, r:BigInteger):Void;
+	function add(a:BigInteger):BigInteger;
+	function subtract(a:BigInteger):BigInteger;
+	function multiply(a:BigInteger):BigInteger;
+	function square():BigInteger;
+	function divide(a:BigInteger):BigInteger;
+	function remainder(a:BigInteger):BigInteger;
+	function divideAndRemainder(a:BigInteger):Array<BigInteger>;
+	function dMultiply(n:Float):Void;
+	function dAddOffset(n:Float, w:Float):Void;
+	function pow(e:Float):BigInteger;
+	function multiplyLowerTo(a:BigInteger, n:Float, r:BigInteger):Void;
+	function multiplyUpperTo(a:BigInteger, n:Float, r:BigInteger):Void;
+	function modPow(e:BigInteger, m:BigInteger):BigInteger;
+	function gcd(a:BigInteger):BigInteger;
+	function modInt(n:Float):Float;
+	function modInverse(m:BigInteger):BigInteger;
+	function isProbablePrime(t:Float):Bool;
+	function millerRabin(t:Float):Bool;
+	static var ZERO : BigInteger;
+	static var ONE : BigInteger;
+}
+typedef Reduction = {
+	function convert(x:BigInteger):BigInteger;
+	function revert(x:BigInteger):BigInteger;
+	function reduce(x:BigInteger):Void;
+	function mulTo(x:BigInteger, y:BigInteger, r:BigInteger):Void;
+	function sqrTo(x:BigInteger, r:BigInteger):Void;
+};

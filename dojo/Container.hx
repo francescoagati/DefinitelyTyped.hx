@@ -1,0 +1,93 @@
+extern class __ContainerArgs {
+	function new():Void;
+	var dropParent : HTMLElement;
+	var skipForm : Bool;
+	function creator():Void;
+}
+extern class AutoSource extends dojo.dnd.Source {
+	function new(node:Dynamic, params:Dynamic):Void;
+	var accept : Array<Dynamic>;
+	var allowNested : Bool;
+	var autoSync : Bool;
+	var copyOnly : Bool;
+	var current : HTMLElement;
+	var delay : Float;
+	var generateText : Bool;
+	var horizontal : Bool;
+	var isSource : Bool;
+	var map : Dynamic;
+	var selection : Dynamic;
+	var selfAccept : Bool;
+	var selfCopy : Bool;
+	var singular : Bool;
+	var skipForm : Bool;
+	var withHandles : Bool;
+	function checkAcceptance(source:Dynamic, nodes:Array<Dynamic>):Bool;
+	function clearItems():Void;
+	function copyState(keyPressed:Bool, self:Bool):Dynamic;
+	function creator():Void;
+	function deleteSelectedNodes():haxe.Constraints.Function;
+	function delItem(key:String):Void;
+	function destroy():Void;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function forInItems(f:haxe.Constraints.Function, o:Dynamic):String;
+	function forInSelectedItems(f:haxe.Constraints.Function, o:Dynamic):Void;
+	function getAllNodes():Dynamic;
+	function getItem(key:String):Dynamic;
+	function getSelectedNodes():Dynamic;
+	function insertNodes(addSelected:Bool, data:Array<Dynamic>, before:Bool, anchor:HTMLElement):haxe.Constraints.Function;
+	function markupFactory(params:Dynamic, node:Dynamic, Ctor:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function selectAll():Dynamic;
+	function selectNone():Dynamic;
+	function setItem(key:String, data:Dynamic):Void;
+	function startup():Void;
+	function sync():haxe.Constraints.Function;
+	function onDndCancel():Void;
+	function onDndDrop(source:Dynamic, nodes:Array<Dynamic>, copy:Bool, target:Dynamic):Void;
+	function onDndSourceOver(source:Dynamic):Void;
+	function onDndStart(source:Dynamic, nodes:Array<Dynamic>, copy:Bool):Void;
+	function onDraggingOut():Void;
+	function onDraggingOver():Void;
+	function onDrop(source:Dynamic, nodes:Array<Dynamic>, copy:Bool):Void;
+	function onDropExternal(source:Dynamic, nodes:Array<Dynamic>, copy:Bool):Void;
+	function onDropInternal(nodes:Array<Dynamic>, copy:Bool):Void;
+	function onMouseDown(e:Event):Void;
+	function onMouseMove(e:Event):Void;
+	function onMouseOut(e:Event):Void;
+	function onMouseOver(e:Event):Void;
+	function onMouseUp(e:Event):Void;
+	function onOutEvent():Void;
+	function onOverEvent():Void;
+	function onSelectStart(e:Event):Void;
+}
+extern class Mover extends dojo.Evented {
+	function new(node:HTMLElement, e:Event, ?host:Dynamic):Void;
+	function destroy():Void;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function onFirstMove(e:Dynamic):Void;
+	function onMouseMove(e:Event):Void;
+	function onMouseUp(e:Dynamic):Void;
+}
+extern class Moveable extends dojo.Evented {
+	function new(node:HTMLElement, ?params:Dynamic):Void;
+	var delay : Float;
+	var handle : String;
+	var skip : Bool;
+	function destroy():Void;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function markupFactory(params:Dynamic, node:Dynamic, Ctor:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function onDragDetected(e:Event):Void;
+	function onFirstMove(mover:dojo.dnd.Mover, e:Event):Void;
+	function onMouseDown(e:Event):Void;
+	function onMouseMove(e:Event):Void;
+	function onMouseUp(e:Event):Void;
+	function onMove(mover:dojo.dnd.Mover, leftTop:Dynamic, e:Event):Void;
+	function onMoved(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onMoveStart(mover:dojo.dnd.Mover):Void;
+	function onMoveStop(mover:dojo.dnd.Mover):Void;
+	function onMoving(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onSelectStart(e:Event):Void;
+}

@@ -1,0 +1,35 @@
+extern class ServiceAreaParameters {
+	var accumulateAttributes : Array<String>;
+	var attributeParameterValues : Array<Dynamic>;
+	var defaultBreaks : Array<Float>;
+	var doNotLocateOnRestrictedElements : Bool;
+	var excludeSourcesFromPolygons : Array<String>;
+	var facilities : Dynamic;
+	var impedanceAttribute : String;
+	var mergeSimilarPolygonRanges : Bool;
+	var outputGeometryPrecision : Float;
+	var outputGeometryPrecisionUnits : String;
+	var outputLines : String;
+	var outputPolygons : String;
+	var outSpatialReference : SpatialReference;
+	var overlapLines : Bool;
+	var overlapPolygons : Bool;
+	var pointBarriers : Dynamic;
+	var polygonBarriers : Dynamic;
+	var polylineBarriers : Dynamic;
+	var restrictionAttributes : Array<String>;
+	var restrictUTurns : String;
+	var returnFacilities : Bool;
+	var returnPointBarriers : Bool;
+	var returnPolygonBarriers : Bool;
+	var returnPolylineBarriers : Bool;
+	var splitLinesAtBreaks : Bool;
+	var splitPolygonsAtBreaks : Bool;
+	var timeOfDay : Date;
+	var travelDirection : String;
+	var trimOuterPolygon : Bool;
+	var trimPolygonDistance : Float;
+	var trimPolygonDistanceUnits : String;
+	var useHierarchy : Bool;
+	function new():Void;
+}

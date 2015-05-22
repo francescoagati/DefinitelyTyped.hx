@@ -1,0 +1,79 @@
+extern class Button {
+	var element : HTMLElement;
+	var type : String;
+	var content : String;
+	var hoverContent : String;
+	var label : String;
+	var tooltip : String;
+	var disabled : Bool;
+	var hidden : Bool;
+	var flyout : Element;
+}
+extern class ControlPanel {
+	var element : HTMLElement;
+	var hidden : Bool;
+	var isPlayPauseHidden : Bool;
+	var isPlayResumeHidden : Bool;
+	var isPauseHidden : Bool;
+	var isReplayHidden : Bool;
+	var isRewindHidden : Bool;
+	var isFastForwardHidden : Bool;
+	var isSlowMotionHidden : Bool;
+	var isSkipPreviousHidden : Bool;
+	var isSkipNextHidden : Bool;
+	var isSkipBackHidden : Bool;
+	var isSkipAheadHidden : Bool;
+	var isElapsedTimeHidden : Bool;
+	var isRemainingTimeHidden : Bool;
+	var isTotalTimeHidden : Bool;
+	var isTimelineHidden : Bool;
+	var isGoLiveHidden : Bool;
+	var isCaptionsHidden : Bool;
+	var isAudioHidden : Bool;
+	var isVolumeMuteHidden : Bool;
+	var isVolumeHidden : Bool;
+	var isMuteHidden : Bool;
+	var isFullScreenHidden : Bool;
+	var isStopHidden : Bool;
+	var isInfoHidden : Bool;
+	var isMoreHidden : Bool;
+	var isZoomHidden : Bool;
+	var isSignalStrengthHidden : Bool;
+	var isMediaQualityHidden : Bool;
+	var flyoutContainerElement : HTMLElement;
+}
+extern class Indicator {
+	var element : HTMLElement;
+	var value : String;
+	var label : String;
+	var tooltip : String;
+	var disabled : Bool;
+	var hidden : Bool;
+}
+extern class Meter {
+	var element : HTMLElement;
+	var value : Float;
+	var label : String;
+	var tooltip : String;
+	var disabled : Bool;
+	var hidden : Bool;
+}
+extern class Slider {
+	var element : HTMLElement;
+	var min : Float;
+	var max : Float;
+	var value : Float;
+	var progress : Float;
+	var step : Float;
+	var altStep1 : Float;
+	var altStep2 : Float;
+	var altStep3 : Float;
+	var label : String;
+	var tooltip : String;
+	var vertical : Bool;
+	var disabled : Bool;
+	var hidden : Bool;
+	var markers : Array<Dynamic>;
+	var thumbnailImageSrc : String;
+	var isThumbnailVisible : Bool;
+}

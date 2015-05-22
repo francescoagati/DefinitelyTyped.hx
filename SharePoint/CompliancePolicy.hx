@@ -1,0 +1,178 @@
+@:enum abstract SPContainerType(Int) {
+	var site = 0;
+	var web = 1;
+	var list = 2;
+}
+extern class SPContainerId extends ClientObject {
+	function new(context:ClientRuntimeContext, objectPath:ObjectPath):Void;
+	static function createFromList(context:ClientRuntimeContext, list:List):SPContainerId;
+	static function createFromWeb(context:ClientRuntimeContext, web:Web):SPContainerId;
+	static function createFromSite(context:ClientRuntimeContext, site:Site):SPContainerId;
+	static function create(context:ClientRuntimeContext, containerId:Dynamic):SPContainerId;
+	function get_containerType():ContentType;
+	function set_containerType(value:ContentType):ContentType;
+	function get_listId():SP.Guid;
+	function set_listId(value:SP.Guid):SP.Guid;
+	function get_siteId():SP.Guid;
+	function set_siteId(value:SP.Guid):SP.Guid;
+	function get_siteUrl():String;
+	function set_siteUrl(value:String):String;
+	function get_tenantId():SP.Guid;
+	function set_tenantId(value:SP.Guid):SP.Guid;
+	function get_title():String;
+	function set_title(value:String):String;
+	function get_version():Dynamic;
+	function set_version(value:Dynamic):Dynamic;
+	function get_webId():SP.Guid;
+	function set_webId(value:SP.Guid):SP.Guid;
+	function serialize():SP.StringResult;
+}
+extern class SPPolicyAssociation extends ClientObject {
+	function new(context:ClientRuntimeContext, objectPath:ObjectPath):Void;
+	function get_allowOverride():Bool;
+	function set_allowOverride(value:Bool):Bool;
+	function get_comment():String;
+	function set_comment(value:String):String;
+	function get_defaultPolicyDefinitionConfigId():Array<Dynamic>;
+	function set_defaultPolicyDefinitionConfigId(value:Array<Dynamic>):Array<Dynamic>;
+	function get_description():String;
+	function set_description(value:String):String;
+	function get_identity():Bool;
+	function set_identity(value:Bool):Bool;
+	function get_name():String;
+	function set_name(value:String):String;
+	function get_policyApplyStatus():Dynamic;
+	function set_policyApplyStatus(value:Dynamic):Dynamic;
+	function get_policyDefinitionConfigIds():Array<Dynamic>;
+	function set_policyDefinitionConfigIds(value:Array<Dynamic>):Array<Dynamic>;
+	function get_scope():Dynamic;
+	function set_scope(value:Dynamic):Dynamic;
+	function get_source():Dynamic;
+	function set_source(value:Dynamic):Dynamic;
+	function get_version():Dynamic;
+	function set_version(value:Dynamic):Dynamic;
+	function get_whenAppliedUTC():Date;
+	function set_whenAppliedUTC(value:Date):Date;
+	function get_whenChangedUTC():Date;
+	function set_whenChangedUTC(value:Date):Date;
+	function get_whenCreatedUTC():Date;
+	function set_whenCreatedUTC(value:Date):Date;
+}
+extern class SPPolicyBinding extends ClientObject {
+	function new(context:ClientRuntimeContext, objectPath:ObjectPath):Void;
+	function get_identity():Dynamic;
+	function set_identity(value:Dynamic):Dynamic;
+	function get_isExempt():Bool;
+	function set_isExempt(value:Bool):Bool;
+	function get_mode():Dynamic;
+	function set_mode(value:Dynamic):Dynamic;
+	function get_name():String;
+	function set_name(value:String):String;
+	function get_policyApplyStatus():Dynamic;
+	function set_policyApplyStatus(value:Dynamic):Dynamic;
+	function get_policyAssociationConfigId():Dynamic;
+	function set_policyAssociationConfigId(value:Dynamic):Dynamic;
+	function get_policyDefinitionConfigId():Dynamic;
+	function set_policyDefinitionConfigId(value:Dynamic):Dynamic;
+	function get_policyRuleConfigId():Dynamic;
+	function set_policyRuleConfigId(value:Dynamic):Dynamic;
+	function get_scope():Dynamic;
+	function set_scope(value:Dynamic):Dynamic;
+	function get_source():Dynamic;
+	function set_source(value:Dynamic):Dynamic;
+	function get_version():Dynamic;
+	function set_version(value:Dynamic):Dynamic;
+	function get_whenAppliedUTC():Date;
+	function set_whenAppliedUTC(value:Date):Date;
+	function get_whenChangedUTC():Date;
+	function set_whenChangedUTC(value:Date):Date;
+	function get_whenCreatedUTC():Date;
+	function set_whenCreatedUTC(value:Date):Date;
+}
+extern class SPPolicyDefinition extends ClientObject {
+	function new(context:ClientRuntimeContext, objectPath:ObjectPath):Void;
+	function get_comment():String;
+	function set_comment(value:String):String;
+	function get_createdBy():Dynamic;
+	function set_createdBy(value:Dynamic):Dynamic;
+	var get_defaultPolicyRuleConfigId : Dynamic;
+	var set_defaultPolicyRuleConfigId : Dynamic;
+	function get_description():String;
+	function set_description(value:String):String;
+	function get_enabled():Bool;
+	function set_enabled(value:Bool):Bool;
+	function get_identity():Dynamic;
+	function set_identity(value:Dynamic):Dynamic;
+	function get_lastModifiedBy():Dynamic;
+	function set_lastModifiedBy(value:Dynamic):Dynamic;
+	function get_name():String;
+	function set_name(value:String):String;
+	function get_mode():Dynamic;
+	function set_mode(value:Dynamic):Dynamic;
+	function get_scenario():Dynamic;
+	function set_scenario(value:Dynamic):Dynamic;
+	function get_source():Dynamic;
+	function set_source(value:Dynamic):Dynamic;
+	function get_version():Dynamic;
+	function set_version(value:Dynamic):Dynamic;
+	function get_whenChangedUTC():Date;
+	function set_whenChangedUTC(value:Date):Date;
+	function get_whenCreatedUTC():Date;
+	function set_whenCreatedUTC(value:Date):Date;
+}
+extern class SPPolicyRule extends ClientObject {
+	function new(context:ClientRuntimeContext, objectPath:ObjectPath):Void;
+	function get_comment():String;
+	function set_comment(value:String):String;
+	function get_createdBy():Dynamic;
+	function set_createdBy(value:Dynamic):Dynamic;
+	function get_description():String;
+	function set_description(value:String):String;
+	function get_enabled():Bool;
+	function set_enabled(value:Bool):Bool;
+	function get_identity():Dynamic;
+	function set_identity(value:Dynamic):Dynamic;
+	function get_lastModifiedBy():Dynamic;
+	function set_lastModifiedBy(value:Dynamic):Dynamic;
+	function get_mode():Dynamic;
+	function set_mode(value:Dynamic):Dynamic;
+	function get_name():String;
+	function set_name(value:String):String;
+	function get_policyDefinitionConfigId():Dynamic;
+	function set_policyDefinitionConfigId(value:Dynamic):Dynamic;
+	function get_priority():Dynamic;
+	function set_priority(value:Dynamic):Dynamic;
+	function get_ruleBlob():Dynamic;
+	function set_ruleBlob(value:Dynamic):Dynamic;
+	function get_whenChangedUTC():Date;
+	function set_whenChangedUTC(value:Date):Date;
+	function get_whenCreatedUTC():Date;
+	function set_whenCreatedUTC(value:Date):Date;
+}
+extern class SPPolicyStore extends ClientObject {
+	function new(context:ClientRuntimeContext, web:Web):Void;
+	static function createPolicyDefinition(context:ClientRuntimeContext):SPPolicyDefinition;
+	static function createPolicyBinding(context:ClientRuntimeContext):SPPolicyBinding;
+	static function createPolicyAssociation(context:ClientRuntimeContext):SPPolicyAssociation;
+	static function createPolicyRule(context:ClientRuntimeContext):SPPolicyRule;
+	function updatePolicyRule(policyRule:SPPolicyRule):Void;
+	function getPolicyRule(policyRuleId:Dynamic, throwIfNull:Bool):SPPolicyRule;
+	function deletePolicyRule(policyRuleId:Dynamic):Dynamic;
+	var void : Dynamic;
+	function notifyUnifiedPolicySync(notificationId:Dynamic, syncSvcUrl:String, changeInfos:Dynamic, syncNow:Bool, fullSyncForTenant:Dynamic):Void;
+	function updatePolicyDefinition(policyDefinition:SPPolicyDefinition):Void;
+	function getPolicyDefinition(policyDefinitionId:Dynamic):SPPolicyDefinition;
+	function deletePolicyDefinition(policyDefinitionId:Dynamic):Void;
+	function getPolicyDefinitions(scenario:Dynamic):ClientObjectList<SPPolicyDefinition>;
+	function updatePolicyBinding(policyBinding:SPPolicyBinding):Void;
+	function getPolicyBinding(policyBindingId:Dynamic):SPPolicyBinding;
+	function deletePolicyBinding(policyBindingId:Dynamic):Void;
+	function updatePolicyAssociation(policyAssociation:SPPolicyAssociation):Void;
+	function getPolicyAssociation(policyAssociationId:Dynamic):SPPolicyAssociation;
+	function getPolicyAssociationForContainer(containerId:SPContainerId):SPPolicyAssociation;
+	function deletePolicyAssociation(policyAssociationId:Dynamic):Void;
+}
+extern class SPPolicyStoreProxy extends ClientObject {
+	function new(context:ClientRuntimeContext, web:Web):Void;
+	function get_policyStoreUrl():String;
+}

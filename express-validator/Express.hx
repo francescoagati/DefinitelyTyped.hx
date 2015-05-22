@@ -1,0 +1,3 @@
+typedef Request = {
+	>ExpressValidator.RequestValidation,
+};

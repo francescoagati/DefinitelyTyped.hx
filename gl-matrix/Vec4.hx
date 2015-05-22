@@ -1,0 +1,38 @@
+extern class Vec4TopLevel {
+	static function create():GLM.IArray;
+	static function clone(a:GLM.IArray):GLM.IArray;
+	static function fromValues(x:Float, y:Float, z:Float, w:Float):GLM.IArray;
+	static function copy(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function set(out:GLM.IArray, x:Float, y:Float, z:Float, w:Float):GLM.IArray;
+	static function add(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function subtract(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function sub(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function multiply(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function mul(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function divide(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function div(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function min(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function max(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function scale(out:GLM.IArray, a:GLM.IArray, b:Float):GLM.IArray;
+	static function scaleAndAdd(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray, scale:Float):GLM.IArray;
+	static function distance(a:GLM.IArray, b:GLM.IArray):Float;
+	static function dist(a:GLM.IArray, b:GLM.IArray):Float;
+	static function squaredDistance(a:GLM.IArray, b:GLM.IArray):Float;
+	static function sqrDist(a:GLM.IArray, b:GLM.IArray):Float;
+	static function length(a:GLM.IArray):Float;
+	static function len(a:GLM.IArray):Float;
+	static function squaredLength(a:GLM.IArray):Float;
+	static function sqrLen(a:GLM.IArray):Float;
+	static function negate(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function inverse(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function normalize(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function dot(a:GLM.IArray, b:GLM.IArray):Float;
+	static function lerp(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray, t:Float):GLM.IArray;
+	static function random(out:GLM.IArray):GLM.IArray;
+	static function random(out:GLM.IArray, scale:Float):GLM.IArray;
+	static function transformMat4(out:GLM.IArray, a:GLM.IArray, mat:GLM.IArray):GLM.IArray;
+	static function transformQuat(out:GLM.IArray, a:GLM.IArray, quat:GLM.IArray):GLM.IArray;
+	static function forEach(out:GLM.IArray, string:Float, offset:Float, count:Float, callback:GLM.IArray -> GLM.IArray -> Dynamic -> Void, arg:Dynamic):GLM.IArray;
+	static function forEach(out:GLM.IArray, string:Float, offset:Float, count:Float, callback:GLM.IArray -> GLM.IArray -> Void):GLM.IArray;
+	static function str(a:GLM.IArray):String;
+}

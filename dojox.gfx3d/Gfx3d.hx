@@ -1,0 +1,45 @@
+extern class Object {
+	function new():Void;
+	function applyLeftTransform(matrix:dojox.gfx3d.matrix.Matrix3D):haxe.Constraints.Function;
+	function applyRightTransform(matrix:dojox.gfx3d.matrix.Matrix3D):haxe.Constraints.Function;
+	function applyTransform(matrix:dojox.gfx3d.matrix.Matrix3D):haxe.Constraints.Function;
+	function destroy():Void;
+	function draw(lighting:Dynamic):Void;
+	function getOutline():Dynamic;
+	function getZOrder():Float;
+	function invalidate():Void;
+	function render(camera:Dynamic):Void;
+	function setFill(fill:Dynamic):haxe.Constraints.Function;
+	function setObject(newObject:Dynamic):haxe.Constraints.Function;
+	function setStroke(stroke:Dynamic):haxe.Constraints.Function;
+	function setTransform(matrix:Dynamic):haxe.Constraints.Function;
+	function toStdFill(lighting:Dynamic, normal:Dynamic):Dynamic;
+}
+typedef _base = {
+	var defaultCube : Dynamic;
+	var defaultCylinder : Dynamic;
+	var defaultEdges : Dynamic;
+	var defaultOrbit : Dynamic;
+	var defaultPath3d : Dynamic;
+	var defaultPolygon : Dynamic;
+	var defaultQuads : Dynamic;
+	var defaultTriangles : Dynamic;
+	var drawer : Dynamic;
+	var lighting : Dynamic;
+	var matrix : Dynamic;
+	var scheduler : Dynamic;
+	var vector : Dynamic;
+	function Cube():Void;
+	function Cylinder():Void;
+	function Edges():Void;
+	function gradient(model:dojox.gfx3d.lighting.Model, material:Dynamic, center:Dynamic, radius:Float, from:Float, to:Float, matrix:Dynamic):Dynamic;
+	function Matrix3D(arg:Dynamic):Void;
+	function Object():Void;
+	function Orbit():Void;
+	function Path3d():Void;
+	function Polygon():Void;
+	function Quads():Void;
+	function Scene():Void;
+	function Triangles():Void;
+	function Viewport():Void;
+};

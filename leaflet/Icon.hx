@@ -1,0 +1,3 @@
+typedef Default = {
+	>Icon,
+};

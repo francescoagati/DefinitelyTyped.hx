@@ -1,0 +1,3 @@
+extern class Vector {
+
+}

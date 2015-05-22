@@ -1,0 +1,111 @@
+typedef DisplayCaps = {
+	>Ti.Proxy,
+	var density : String;
+	var dpi : Float;
+	var logicalDensityFactor : Float;
+	var platformHeight : Float;
+	var platformWidth : Float;
+	var xdpi : Float;
+	var ydpi : Float;
+	function getDensity():String;
+	function getDpi():Float;
+	function getLogicalDensityFactor():Float;
+	function getPlatformHeight():Float;
+	function getPlatformWidth():Float;
+	function getXdpi():Float;
+	function getYdpi():Float;
+};
+typedef Android = {
+	var API_LEVEL : Float;
+	var PHYSICAL_SIZE_CATEGORY_LARGE : Float;
+	var PHYSICAL_SIZE_CATEGORY_NORMAL : Float;
+	var PHYSICAL_SIZE_CATEGORY_SMALL : Float;
+	var PHYSICAL_SIZE_CATEGORY_UNDEFINED : Float;
+	var PHYSICAL_SIZE_CATEGORY_XLARGE : Float;
+	var physicalSizeCategory : Float;
+	function getPhysicalSizeCategory():Float;
+};
+extern class PlatformTopLevel {
+	static var BATTERY_STATE_CHARGING : Float;
+	static var BATTERY_STATE_FULL : Float;
+	static var BATTERY_STATE_UNKNOWN : Float;
+	static var BATTERY_STATE_UNPLUGGED : Float;
+	static var address : String;
+	static var apiName : String;
+	static var architecture : String;
+	static var availableMemory : Float;
+	static var batteryLevel : Float;
+	static var batteryMonitoring : Bool;
+	static var batteryState : Float;
+	static var bubbleParent : Bool;
+	static var displayCaps : Ti.Platform.DisplayCaps;
+	static var id : String;
+	static var locale : String;
+	static var macaddress : String;
+	static var manufacturer : String;
+	static var model : String;
+	static var name : String;
+	static var netmask : String;
+	static var osname : String;
+	static var ostype : String;
+	static var processorCount : Float;
+	static var runtime : String;
+	static var username : String;
+	static var version : String;
+	static function addEventListener(name:String, callback:haxe.extern.Rest<Dynamic> -> Dynamic):Void;
+	static function applyProperties(props:Dictionary<Dynamic>):Void;
+	static function canOpenURL(url:String):Bool;
+	static function createUUID():String;
+	static function fireEvent(name:String, event:Dictionary<Dynamic>):Void;
+	static function getAddress():String;
+	static function getApiName():String;
+	static function getArchitecture():String;
+	static function getAvailableMemory():Float;
+	static function getBatteryLevel():Float;
+	static function getBatteryMonitoring():Bool;
+	static function getBatteryState():Float;
+	static function getBubbleParent():Bool;
+	static function getDisplayCaps():Ti.Platform.DisplayCaps;
+	static function getId():String;
+	static function getLocale():String;
+	static function getMacaddress():String;
+	static function getManufacturer():String;
+	static function getModel():String;
+	static function getName():String;
+	static function getNetmask():String;
+	static function getOsname():String;
+	static function getOstype():String;
+	static function getProcessorCount():Float;
+	static function getRuntime():String;
+	static function getUsername():String;
+	static function getVersion():String;
+	static function is24HourTimeFormat():Bool;
+	static function openURL(url:String):Bool;
+	static function removeEventListener(name:String, callback:haxe.extern.Rest<Dynamic> -> Dynamic):Void;
+	static function setBatteryMonitoring(batteryMonitoring:Bool):Void;
+	static function setBubbleParent(bubbleParent:Bool):Void;
+}
+typedef Buffer = {
+	>Ti.Proxy,
+	var byteOrder : Float;
+	var length : Float;
+	var type : String;
+	var value : Dynamic;
+	function append(sourceBuffer:Ti.Buffer, ?sourceOffset:Float, ?sourceLength:Float):Float;
+	function clear():Void;
+	function clone(?offset:Float, ?length:Float):Ti.Buffer;
+	function copy(sourceBuffer:Ti.Buffer, offset:Float, ?sourceOffset:Float, ?sourceLength:Float):Float;
+	function fill(fillByte:Float, ?offset:Float, ?length:Float):Void;
+	function getByteOrder():Float;
+	function getLength():Float;
+	function getType():String;
+	function getValue():Dynamic;
+	function insert(sourceBuffer:Ti.Buffer, offset:Float, ?sourceOffset:Float, ?sourceLength:Float):Float;
+	function release():Void;
+	function setLength(length:Float):Void;
+	function toBlob():Ti.Blob;
+	function toString():String;
+};
+@:enum abstract BufferStream(Int) {
+
+}

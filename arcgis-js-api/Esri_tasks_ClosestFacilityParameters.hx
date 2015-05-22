@@ -1,0 +1,36 @@
+extern class ClosestFacilityParameters {
+	var accumulateAttributes : Array<String>;
+	var attributeParameterValues : Array<Dynamic>;
+	var defaultCutoff : Float;
+	var defaultTargetFacilityCount : Float;
+	var directionsLanguage : String;
+	var directionsLengthUnits : String;
+	var directionsOutputType : String;
+	var directionsStyleName : String;
+	var directionsTimeAttribute : String;
+	var doNotLocateOnRestrictedElements : Bool;
+	var facilities : Dynamic;
+	var impedenceAttribute : String;
+	var incidents : Dynamic;
+	var outputGeometryPrecision : Float;
+	var outputGeometryPrecisionUnits : String;
+	var outputLines : String;
+	var outSpatialReference : SpatialReference;
+	var pointBarriers : Dynamic;
+	var polygonBarriers : Dynamic;
+	var polylineBarriers : Dynamic;
+	var restrictionAttributes : Array<String>;
+	var restrictUTurns : String;
+	var returnDirections : Bool;
+	var returnFacilities : Bool;
+	var returnIncidents : Bool;
+	var returnPointBarriers : Bool;
+	var returnPolygonBarriers : Bool;
+	var returnPolylineBarriers : Bool;
+	var returnRoutes : Bool;
+	var timeOfDay : Date;
+	var timeOfDayUsage : String;
+	var travelDirection : String;
+	var useHierarchy : Bool;
+	function new():Void;
+}

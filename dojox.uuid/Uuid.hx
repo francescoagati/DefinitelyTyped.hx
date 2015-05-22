@@ -1,0 +1,2 @@
+typedef GenerateRandomUuid = { };
+typedef GenerateTimeBasedUuid = { };

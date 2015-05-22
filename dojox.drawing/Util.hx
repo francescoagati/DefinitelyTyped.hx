@@ -1,0 +1,23 @@
+typedef Common = {
+	var objects : Dynamic;
+	function abbr(type:Dynamic):Float;
+	function angle(obj:Event, snap:Float):Dynamic;
+	function argsToObj():Dynamic;
+	function attr(elem:Dynamic, prop:String, value:Dynamic, squelchErrors:Dynamic):Bool;
+	function byId(id:String):Dynamic;
+	function constrainAngle(obj:Event, min:Float, max:Float):Event;
+	function degToRad(n:Float):Float;
+	function distance():Dynamic;
+	function idSetStart(num:Dynamic):Void;
+	function length(o:Event):Dynamic;
+	function lineSub(x1:Float, y1:Float, x2:Float, y2:Float, amt:Float):Dynamic;
+	function mixin(o1:Dynamic, o2:Dynamic):Void;
+	function oppAngle(ang:Float):Float;
+	function pointOnCircle(cx:Float, cy:Float, radius:Float, angle:Float):Dynamic;
+	function radians(o:Event):Dynamic;
+	function radToDeg(n:Float):Float;
+	function register(obj:Dynamic):Void;
+	function slope(p1:Dynamic, p2:Dynamic):Float;
+	function snapAngle(obj:Event, ca:Float):Dynamic;
+	function uid(str:String):String;
+};

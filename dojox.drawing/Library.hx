@@ -1,0 +1,19 @@
+typedef Icons = {
+	var arrow : Dynamic;
+	var axes : Dynamic;
+	var ellipse : Dynamic;
+	var equation : Dynamic;
+	var iconize : Dynamic;
+	var line : Dynamic;
+	var pan : Dynamic;
+	var path : Dynamic;
+	var pencil : Dynamic;
+	var plus : Dynamic;
+	var rect : Dynamic;
+	var textBlock : Dynamic;
+	var triangle : Dynamic;
+	var vector : Dynamic;
+	var zoom100 : Dynamic;
+	var zoomIn : Dynamic;
+	var zoomOut : Dynamic;
+};

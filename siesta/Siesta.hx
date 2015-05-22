@@ -1,0 +1,25 @@
+typedef IHarness = {
+	var alsoPreload : Array<Dynamic>;
+	var autoCheckGlobals : Bool;
+	var cachePreload : Bool;
+	var defaultTimeout : Bool;
+	var disableColoring : Bool;
+	var expectedGlobals : Array<String>;
+	var isReadyTimeout : Float;
+	var keepNLastResults : Float;
+	var keepResults : Bool;
+	var listenters : { };
+	var maxThreads : Float;
+	var needDone : Bool;
+	var overrideSetTimeout : Bool;
+	var pauseBetweenTests : Float;
+	var preload : Array<Dynamic>;
+	var runCore : String;
+	var subTestTimeout : Float;
+	var testClass : Siesta.ITest;
+	var title : String;
+	var transparentEx : Bool;
+	var waitForTimeout : Float;
+	function configure(config:Dynamic):Void;
+	function start(descriptors:haxe.extern.Rest<Dynamic>):Void;
+};

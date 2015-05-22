@@ -1,0 +1,2 @@
+typedef Transit = { };
+typedef Transition = { };

@@ -1,0 +1,32 @@
+extern class Uri {
+	function new(?str:String):Void;
+	function protocol(?val:String):String;
+	function userInfo(?val:String):String;
+	function host(?val:String):String;
+	function port(?val:Float):Float;
+	function path(?val:String):String;
+	function anchor(?val:String):String;
+	function hasAuthorityPrefix(?val:Bool):Bool;
+	function isColonUri(?val:Bool):Bool;
+	function query(?val:String):String;
+	function getQueryParamValue(key:String):String;
+	function getQueryParamValues(key:String):Array<String>;
+	function deleteQueryParam(key:String, ?val:String):Uri;
+	function addQueryParam(key:String, val:Primitive, ?index:Float):Uri;
+	function hasQueryParam(key:String):Bool;
+	function replaceQueryParam(key:String, newVal:Primitive, ?oldVal:Primitive):Uri;
+	function setProtocol(val:String):Uri;
+	function setHasAuthorityPrefix(val:Bool):Uri;
+	function setIsColonUri(val:Bool):Uri;
+	function setUserInfo(val:String):Uri;
+	function setHost(val:String):Uri;
+	function setPort(val:Float):Uri;
+	function setPath(val:String):Uri;
+	function setQuery(val:String):Uri;
+	function setAnchor(val:String):Uri;
+	function scheme():String;
+	function origin():String;
+	function addTrailingSlash():Uri;
+	function toString():String;
+	function clone():Uri;
+}

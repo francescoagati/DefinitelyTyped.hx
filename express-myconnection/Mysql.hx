@@ -1,0 +1,2 @@
+typedef IConnection = { };
+typedef IError = { };

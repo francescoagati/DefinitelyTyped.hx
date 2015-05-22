@@ -1,0 +1,2 @@
+typedef DOM = { };
+typedef Sandbox = { };

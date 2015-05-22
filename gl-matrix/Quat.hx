@@ -1,0 +1,31 @@
+extern class QuatTopLevel {
+	static function create():GLM.IArray;
+	static function clone(a:GLM.IArray):GLM.IArray;
+	static function fromValues(x:Float, y:Float, z:Float, w:Float):GLM.IArray;
+	static function copy(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function set(out:GLM.IArray, x:Float, y:Float, z:Float, w:Float):GLM.IArray;
+	static function identity(out:GLM.IArray):GLM.IArray;
+	static function setAxisAngle(out:GLM.IArray, axis:GLM.IArray, rad:Float):GLM.IArray;
+	static function add(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function multiply(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function mul(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function scale(out:GLM.IArray, a:GLM.IArray, b:Float):GLM.IArray;
+	static function length(a:GLM.IArray):Float;
+	static function len(a:GLM.IArray):Float;
+	static function squaredLength(a:GLM.IArray):Float;
+	static function sqrLen(a:GLM.IArray):Float;
+	static function normalize(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function dot(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):Float;
+	static function lerp(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray, t:Float):GLM.IArray;
+	static function slerp(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray, t:Float):GLM.IArray;
+	static function invert(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function conjugate(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+	static function str(a:GLM.IArray):String;
+	static function rotateX(out:GLM.IArray, a:GLM.IArray, rad:Float):GLM.IArray;
+	static function rotateY(out:GLM.IArray, a:GLM.IArray, rad:Float):GLM.IArray;
+	static function rotateZ(out:GLM.IArray, a:GLM.IArray, rad:Float):GLM.IArray;
+	static function fromMat3(out:GLM.IArray, m:GLM.IArray):GLM.IArray;
+	static function setAxes(out:GLM.IArray, view:GLM.IArray, right:GLM.IArray, up:GLM.IArray):GLM.IArray;
+	static function rotationTo(out:GLM.IArray, a:GLM.IArray, b:GLM.IArray):GLM.IArray;
+	static function calculateW(out:GLM.IArray, a:GLM.IArray):GLM.IArray;
+}

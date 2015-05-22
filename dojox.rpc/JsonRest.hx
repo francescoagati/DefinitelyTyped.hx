@@ -1,0 +1,2 @@
+typedef Services = { };
+typedef Schemas = { };

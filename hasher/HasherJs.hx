@@ -1,0 +1,20 @@
+typedef HasherStatic = {
+	function appendHash():String;
+	var changed : Signal;
+	var initialized : Signal;
+	var prependHash : String;
+	var separator : String;
+	var stopped : Signal;
+	var VERSION : String;
+	function dispose():Void;
+	function getBaseURL():String;
+	function getHash():String;
+	function getHashAsArray():Array<String>;
+	function getURL():String;
+	function init():Void;
+	function isActive():Bool;
+	function replaceHash(path:haxe.extern.Rest<String>):Void;
+	function setHash(path:haxe.extern.Rest<String>):Void;
+	function stop():Void;
+	function toString():String;
+};

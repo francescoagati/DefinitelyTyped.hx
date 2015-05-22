@@ -1,0 +1,2 @@
+typedef Decorator = { };
+typedef Decorator = { };

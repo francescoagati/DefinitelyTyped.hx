@@ -1,0 +1,3 @@
+typedef NativeMouseEvent = {
+	>MouseEvent,
+};

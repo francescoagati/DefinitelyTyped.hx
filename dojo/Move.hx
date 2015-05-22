@@ -1,0 +1,71 @@
+extern class ParentConstrainedMoveable extends dojo.dnd.Moveable {
+	function new(node:HTMLElement, ?params:Dynamic):Void;
+	var area : String;
+	var delay : Float;
+	var handle : String;
+	var skip : Bool;
+	var within : Bool;
+	function constraints():Void;
+	function destroy():Void;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function markupFactory(params:Dynamic, node:Dynamic, Ctor:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function onDragDetected(e:Event):Void;
+	function onFirstMove(mover:dojo.dnd.Mover):Void;
+	function onMouseDown(e:Event):Void;
+	function onMouseMove(e:Event):Void;
+	function onMouseUp(e:Event):Void;
+	function onMove(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onMoved(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onMoveStart(mover:dojo.dnd.Mover):Void;
+	function onMoveStop(mover:dojo.dnd.Mover):Void;
+	function onMoving(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onSelectStart(e:Event):Void;
+}
+extern class BoxConstrainedMoveable extends dojo.dnd.Moveable {
+	function new(node:HTMLElement, ?params:Dynamic):Void;
+	var box : Dynamic;
+	var delay : Float;
+	var handle : String;
+	var skip : Bool;
+	var within : Bool;
+	function constraints():Void;
+	function destroy():Void;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function markupFactory(params:Dynamic, node:Dynamic, Ctor:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function onDragDetected(e:Event):Void;
+	function onFirstMove(mover:dojo.dnd.Mover):Void;
+	function onMouseDown(e:Event):Void;
+	function onMouseMove(e:Event):Void;
+	function onMouseUp(e:Event):Void;
+	function onMove(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onMoved(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onMoveStart(mover:dojo.dnd.Mover):Void;
+	function onMoveStop(mover:dojo.dnd.Mover):Void;
+	function onMoving(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onSelectStart(e:Event):Void;
+}
+extern class ConstrainedMoveable extends dojo.dnd.Moveable {
+	function new(node:HTMLElement, ?params:Dynamic):Void;
+	var delay : Float;
+	var handle : String;
+	var skip : Bool;
+	var within : Bool;
+	function constraints():Void;
+	function destroy():Void;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function markupFactory(params:Dynamic, node:Dynamic, Ctor:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function onDragDetected(e:Event):Void;
+	function onFirstMove(mover:dojo.dnd.Mover):Void;
+	function onMouseDown(e:Event):Void;
+	function onMouseMove(e:Event):Void;
+	function onMouseUp(e:Event):Void;
+	function onMove(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onMoved(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onMoveStart(mover:dojo.dnd.Mover):Void;
+	function onMoveStop(mover:dojo.dnd.Mover):Void;
+	function onMoving(mover:dojo.dnd.Mover, leftTop:Dynamic):Void;
+	function onSelectStart(e:Event):Void;
+}

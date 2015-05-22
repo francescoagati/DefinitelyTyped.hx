@@ -1,0 +1,104 @@
+typedef Fixtures = {
+	var fixturesPath : String;
+	var containerId : String;
+	function set(html:String):String;
+	function appendSet(html:String):Dynamic;
+	function preload(uls:haxe.extern.Rest<String>):Dynamic;
+	function load(uls:haxe.extern.Rest<String>):Dynamic;
+	function appendLoad(uls:haxe.extern.Rest<String>):Dynamic;
+	function read(uls:haxe.extern.Rest<String>):String;
+	function clearCache():Dynamic;
+	function cleanUp():Dynamic;
+	function sandbox(?attributes:Dynamic):String;
+	function createContainer_(html:String):Dynamic;
+	function addToContainer_(html:String):Dynamic;
+	function getFixtureHtml_(url:String):String;
+	function loadFixtureIntoCache_(relativeUrl:String):Dynamic;
+	function makeFixtureUrl_(relativeUrl:String):String;
+	function proxyCallTo_(methodName:String, passedArguments:Dynamic):Dynamic;
+};
+typedef StyleFixtures = {
+	var fixturesPath : String;
+	function set(html:String):String;
+	function appendSet(html:String):Dynamic;
+	function preload(uls:haxe.extern.Rest<String>):Dynamic;
+	function load(uls:haxe.extern.Rest<String>):Dynamic;
+	function appendLoad(uls:haxe.extern.Rest<String>):Dynamic;
+	function read_(uls:haxe.extern.Rest<String>):String;
+	function clearCache():Dynamic;
+	function cleanUp():Dynamic;
+	function createStyle_(html:String):Dynamic;
+	function getFixtureHtml_(url:String):String;
+	function loadFixtureIntoCache_(relativeUrl:String):Dynamic;
+	function makeFixtureUrl_(relativeUrl:String):String;
+	function proxyCallTo_(methodName:String, passedArguments:Dynamic):Dynamic;
+};
+typedef JSONFixtures = {
+	var fixturesPath : String;
+	function load(uls:haxe.extern.Rest<String>):Dynamic;
+	function read(uls:haxe.extern.Rest<String>):String;
+	function clearCache():Dynamic;
+	function getFixtureData_(url:String):Dynamic;
+	function loadFixtureIntoCache_(relativeUrl:String):Dynamic;
+	function proxyCallTo_(methodName:String, passedArguments:Dynamic):Dynamic;
+};
+typedef Matchers = {
+	function toHaveClass(className:String):Bool;
+	function toHaveCss(css:Dynamic):Bool;
+	function toBeVisible():Bool;
+	function toBeHidden():Bool;
+	function toBeSelected():Bool;
+	function toBeChecked():Bool;
+	function toBeEmpty():Bool;
+	function toExist():Bool;
+	function toHaveLength(length:Float):Bool;
+	function toHaveAttr(attributeName:String, ?expectedAttributeValue:Dynamic):Bool;
+	function toHaveProp(propertyName:String, ?expectedPropertyValue:Dynamic):Bool;
+	function toHaveId(id:String):Bool;
+	function toHaveHtml(html:String):Bool;
+	function toHaveText(text:String):Bool;
+	function toHaveValue(value:Dynamic):Bool;
+	function toHaveData(key:Dynamic, expectedValue:Dynamic):Bool;
+	function toBe(selector:JQuery):Bool;
+	function toContain(selector:JQuery):Bool;
+	function toBeMatchedBy(selector:String):Bool;
+	function toBeDisabled():Bool;
+	function toBeFocused():Bool;
+	function toHandle(event:Dynamic):Bool;
+	function toHandleWith(eventName:String, eventHandler:Dynamic):Bool;
+	function toHaveBeenTriggered():Bool;
+	function toHaveBeenTriggeredOn(selector:String):Bool;
+	function toHaveBeenTriggeredOnAndWith(selector:String, args:haxe.extern.Rest<Dynamic>):Bool;
+	function toHaveBeenPrevented():Bool;
+	function toHaveBeenPreventedOn(selector:String):Bool;
+	function toHaveBeenStopped():Bool;
+	function toHaveBeenStoppedOn(selector:String):Bool;
+};
+typedef JQueryEventSpy = {
+	var selector : String;
+	var eventName : String;
+	function handler(eventObject:JQueryEventObject):Dynamic;
+	function reset():Dynamic;
+};
+typedef JasmineJQuery = {
+	function browserTagCaseIndependentHtml(html:String):String;
+	function elementToString(element:JQuery):String;
+	var matchersClass : Dynamic;
+	var events : JasmineJQueryEvents;
+};
+typedef JasmineJQueryEvents = {
+	function spyOn(selector:String, eventName:String):JQueryEventSpy;
+	function args(selector:String, eventName:String):Dynamic;
+	function wasTriggered(selector:String, eventName:String):Bool;
+	function wasTriggeredWith(selector:String, eventName:String, expectedArgs:Dynamic, env:jasmine.Env):Bool;
+	function wasPrevented(selector:String, eventName:String):Bool;
+	function wasStopped(selector:String, eventName:String):Bool;
+	function cleanUp():Dynamic;
+};
+extern class JasmineTopLevel {
+	static function spiedEventsKey(selector:JQuery, eventName:String):String;
+	static function getFixtures():Fixtures;
+	static function getStyleFixtures():StyleFixtures;
+	static function getJSONFixtures():JSONFixtures;
+	static var JQuery : JasmineJQuery;
+}

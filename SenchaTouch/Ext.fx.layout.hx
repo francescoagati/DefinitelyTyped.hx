@@ -1,0 +1,3 @@
+typedef ICard = {
+	>Ext.IBase,
+};

@@ -1,0 +1,23 @@
+typedef Main = {
+	var buddhist : Dynamic;
+	var charting : Dynamic;
+	var data : Dynamic;
+	var functional : Dynamic;
+	var gesture : Dynamic;
+	var grid : Dynamic;
+	var hebrew : Dynamic;
+	var highlight : Dynamic;
+	var image : Dynamic;
+	var islamic : Dynamic;
+	var json : Dynamic;
+	var languages : Dynamic;
+	var math : Dynamic;
+	var persian : Dynamic;
+	var regexp : Dynamic;
+	var relative : Dynamic;
+	var rpc : Dynamic;
+	var umalqura : Dynamic;
+	var util : Dynamic;
+	var utils : Dynamic;
+	var validate : Dynamic;
+};

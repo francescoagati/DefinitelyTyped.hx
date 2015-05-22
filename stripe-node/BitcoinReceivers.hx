@@ -1,0 +1,32 @@
+typedef IBitcoinReceiver = {
+	var id : String;
+	var object : String;
+	var livemode : Bool;
+	var active : Bool;
+	var amount : Float;
+	var amount_received : Float;
+	var bitcoin_amount : Float;
+	var bitcoin_amount_received : Float;
+	var bitcoin_uri : Float;
+	var created : Float;
+	var currency : String;
+	var filled : Bool;
+	var inbound_address : String;
+	var transactions : IList<IBitcoinTransaction>;
+	var uncaptured_funds : Bool;
+	var description : String;
+	var email : String;
+	var metadata : IMetadata;
+	var payment : String;
+	var refund_address : String;
+	var customer : String;
+};
+typedef IBitcoinTransaction = {
+	var id : String;
+	var object : String;
+	var amount : Float;
+	var bitcoin_amount : Float;
+	var created : Float;
+	var currency : String;
+	var receiver : String;
+};

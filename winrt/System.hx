@@ -1,0 +1,187 @@
+typedef ILauncherUIOptions = {
+	var invocationPoint : Windows.Foundation.Point;
+	var preferredPlacement : Windows.UI.Popups.Placement;
+	var selectionRect : Windows.Foundation.Rect;
+};
+extern class LauncherUIOptions {
+	var invocationPoint : Windows.Foundation.Point;
+	var preferredPlacement : Windows.UI.Popups.Placement;
+	var selectionRect : Windows.Foundation.Rect;
+}
+typedef ILauncherOptions = {
+	var contentType : String;
+	var displayApplicationPicker : Bool;
+	var fallbackUri : Windows.Foundation.Uri;
+	var preferredApplicationDisplayName : String;
+	var preferredApplicationPackageFamilyName : String;
+	var treatAsUntrusted : Bool;
+	var uI : Windows.System.LauncherUIOptions;
+};
+extern class LauncherOptions {
+	var contentType : String;
+	var displayApplicationPicker : Bool;
+	var fallbackUri : Windows.Foundation.Uri;
+	var preferredApplicationDisplayName : String;
+	var preferredApplicationPackageFamilyName : String;
+	var treatAsUntrusted : Bool;
+	var uI : Windows.System.LauncherUIOptions;
+}
+typedef ILauncherStatics = {
+	@:overload(function(file:Windows.Storage.IStorageFile, options:Windows.System.LauncherOptions):Windows.Foundation.IAsyncOperation<Bool> { })
+	function launchFileAsync(file:Windows.Storage.IStorageFile):Windows.Foundation.IAsyncOperation<Bool>;
+	@:overload(function(uri:Windows.Foundation.Uri, options:Windows.System.LauncherOptions):Windows.Foundation.IAsyncOperation<Bool> { })
+	function launchUriAsync(uri:Windows.Foundation.Uri):Windows.Foundation.IAsyncOperation<Bool>;
+};
+extern class Launcher {
+	@:overload(function(file:Windows.Storage.IStorageFile, options:Windows.System.LauncherOptions):Windows.Foundation.IAsyncOperation<Bool> { })
+	static function launchFileAsync(file:Windows.Storage.IStorageFile):Windows.Foundation.IAsyncOperation<Bool>;
+	@:overload(function(uri:Windows.Foundation.Uri, options:Windows.System.LauncherOptions):Windows.Foundation.IAsyncOperation<Bool> { })
+	static function launchUriAsync(uri:Windows.Foundation.Uri):Windows.Foundation.IAsyncOperation<Bool>;
+}
+@:enum abstract ProcessorArchitecture(Int) {
+	var x86 = 0;
+	var arm = 1;
+	var x64 = 2;
+	var neutral = 3;
+	var unknown = 4;
+}
+@:enum abstract VirtualKeyModifiers(Int) {
+	var none = 0;
+	var control = 1;
+	var menu = 2;
+	var shift = 3;
+	var windows = 4;
+}
+@:enum abstract VirtualKey(Int) {
+	var none = 0;
+	var leftButton = 1;
+	var rightButton = 2;
+	var cancel = 3;
+	var middleButton = 4;
+	var xButton1 = 5;
+	var xButton2 = 6;
+	var back = 7;
+	var tab = 8;
+	var clear = 9;
+	var enter = 10;
+	var shift = 11;
+	var control = 12;
+	var menu = 13;
+	var pause = 14;
+	var capitalLock = 15;
+	var kana = 16;
+	var hangul = 17;
+	var junja = 18;
+	var final = 19;
+	var hanja = 20;
+	var kanji = 21;
+	var escape = 22;
+	var convert = 23;
+	var nonConvert = 24;
+	var accept = 25;
+	var modeChange = 26;
+	var space = 27;
+	var pageUp = 28;
+	var pageDown = 29;
+	var end = 30;
+	var home = 31;
+	var left = 32;
+	var up = 33;
+	var right = 34;
+	var down = 35;
+	var select = 36;
+	var print = 37;
+	var execute = 38;
+	var snapshot = 39;
+	var insert = 40;
+	var delete_ = 41;
+	var help = 42;
+	var number0 = 43;
+	var number1 = 44;
+	var number2 = 45;
+	var number3 = 46;
+	var number4 = 47;
+	var number5 = 48;
+	var number6 = 49;
+	var number7 = 50;
+	var number8 = 51;
+	var number9 = 52;
+	var a = 53;
+	var b = 54;
+	var c = 55;
+	var d = 56;
+	var e = 57;
+	var f = 58;
+	var g = 59;
+	var h = 60;
+	var i = 61;
+	var j = 62;
+	var k = 63;
+	var l = 64;
+	var m = 65;
+	var n = 66;
+	var o = 67;
+	var p = 68;
+	var q = 69;
+	var r = 70;
+	var s = 71;
+	var t = 72;
+	var u = 73;
+	var v = 74;
+	var w = 75;
+	var x = 76;
+	var y = 77;
+	var z = 78;
+	var leftWindows = 79;
+	var rightWindows = 80;
+	var application = 81;
+	var sleep = 82;
+	var numberPad0 = 83;
+	var numberPad1 = 84;
+	var numberPad2 = 85;
+	var numberPad3 = 86;
+	var numberPad4 = 87;
+	var numberPad5 = 88;
+	var numberPad6 = 89;
+	var numberPad7 = 90;
+	var numberPad8 = 91;
+	var numberPad9 = 92;
+	var multiply = 93;
+	var add = 94;
+	var separator = 95;
+	var subtract = 96;
+	var decimal = 97;
+	var divide = 98;
+	var f1 = 99;
+	var f2 = 100;
+	var f3 = 101;
+	var f4 = 102;
+	var f5 = 103;
+	var f6 = 104;
+	var f7 = 105;
+	var f8 = 106;
+	var f9 = 107;
+	var f10 = 108;
+	var f11 = 109;
+	var f12 = 110;
+	var f13 = 111;
+	var f14 = 112;
+	var f15 = 113;
+	var f16 = 114;
+	var f17 = 115;
+	var f18 = 116;
+	var f19 = 117;
+	var f20 = 118;
+	var f21 = 119;
+	var f22 = 120;
+	var f23 = 121;
+	var f24 = 122;
+	var numberKeyLock = 123;
+	var scroll = 124;
+	var leftShift = 125;
+	var rightShift = 126;
+	var leftControl = 127;
+	var rightControl = 128;
+	var leftMenu = 129;
+	var rightMenu = 130;
+}

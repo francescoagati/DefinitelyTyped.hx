@@ -1,0 +1,35 @@
+extern class Query {
+	static var SPATIAL_REL_CONTAINS : Dynamic;
+	static var SPATIAL_REL_CROSSES : Dynamic;
+	static var SPATIAL_REL_ENVELOPEINTERSECTS : Dynamic;
+	static var SPATIAL_REL_INDEXINTERSECTS : Dynamic;
+	static var SPATIAL_REL_INTERSECTS : Dynamic;
+	static var SPATIAL_REL_OVERLAPS : Dynamic;
+	static var SPATIAL_REL_RELATION : Dynamic;
+	static var SPATIAL_REL_TOUCHES : Dynamic;
+	static var SPATIAL_REL_WITHIN : Dynamic;
+	var distance : Float;
+	var geometry : Geometry;
+	var geometryPrecision : Float;
+	var groupByFieldsForStatistics : Array<String>;
+	var maxAllowableOffset : Float;
+	var multipatchOption : String;
+	var num : Float;
+	var objectIds : Array<Float>;
+	var orderByFields : Array<String>;
+	var outFields : Array<String>;
+	var outSpatialReference : SpatialReference;
+	var outStatistics : Array<StatisticDefinition>;
+	var pixelSize : Symbol;
+	var quantizationParameters : Dynamic;
+	var relationParam : String;
+	var returnDistinctValues : Bool;
+	var returnGeometry : Bool;
+	var spatialRelationship : String;
+	var start : Float;
+	var text : String;
+	var timeExtent : TimeExtent;
+	var units : String;
+	var where : String;
+	function new():Void;
+}

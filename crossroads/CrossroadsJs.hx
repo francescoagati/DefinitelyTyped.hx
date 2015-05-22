@@ -1,0 +1,31 @@
+typedef Route = {
+	var matched : Signal;
+	var switched : Signal;
+	var rules : Dynamic;
+	var greedy : Bool;
+	function dispose():Dynamic;
+	function match(request:Dynamic):Bool;
+	function interpolate(replacements:Dynamic):String;
+	function add(listener:haxe.Constraints.Function, ?listenerContext:Dynamic, ?priority:Number):SignalBinding;
+};
+typedef CrossRoadsStatic = {
+	var NORM_AS_ARRAY : haxe.Constraints.Function;
+	var NORM_AS_OBJECT : haxe.Constraints.Function;
+	function addRoute(pattern:Dynamic, ?handler:haxe.Constraints.Function, ?priority:Float):Route;
+	function removeRoute(route:Route):Dynamic;
+	function removeAllRoutes():Dynamic;
+	function parse(request:String, defaultArgs:haxe.extern.Rest<Dynamic>):Dynamic;
+	function getNumRoutes():Float;
+	var bypassed : Signal;
+	var routed : Signal;
+	function create():CrossRoadsStatic;
+	var normalizeFn : haxe.Constraints.Function;
+	var shouldTypecast : Bool;
+	var VERSION : String;
+	var greedy : Bool;
+	var greedyEnabled : Bool;
+	function resetState():Dynamic;
+	var ignoreState : Bool;
+	function pipe(router:CrossRoadsStatic):Dynamic;
+	function unpipe(router:CrossRoadsStatic):Dynamic;
+};

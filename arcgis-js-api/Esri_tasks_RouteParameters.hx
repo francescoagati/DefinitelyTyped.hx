@@ -1,0 +1,36 @@
+extern class RouteParameters {
+	var accumulateAttributes : Array<String>;
+	var attributeParameterValues : Array<Dynamic>;
+	var barriers : Dynamic;
+	var directionsLanguage : String;
+	var directionsLengthUnits : String;
+	var directionsOutputType : String;
+	var directionsStyleName : String;
+	var directionsTimeAttribute : String;
+	var doNotLocateOnRestrictedElements : Bool;
+	var findBestSequence : Bool;
+	var ignoreInvalidLocations : Bool;
+	var impedanceAttribute : String;
+	var outputGeometryPrecision : Float;
+	var outputGeometryPrecisionUnits : String;
+	var outputLines : String;
+	var outSpatialReference : SpatialReference;
+	var polygonBarriers : Dynamic;
+	var polylineBarriers : Dynamic;
+	var preserveFirstStop : Bool;
+	var preserveLastStop : Bool;
+	var restrictionAttributes : Array<String>;
+	var restrictUTurns : String;
+	var returnBarriers : Bool;
+	var returnDirections : Bool;
+	var returnPolygonBarriers : Bool;
+	var returnPolylineBarriers : Bool;
+	var returnRoutes : Bool;
+	var returnStops : Bool;
+	var startTime : Date;
+	var startTimeIsUTC : Bool;
+	var stops : Dynamic;
+	var useHierarchy : Bool;
+	var useTimeWindows : Bool;
+	function new():Void;
+}

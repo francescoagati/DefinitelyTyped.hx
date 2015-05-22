@@ -1,0 +1,28 @@
+typedef ObservableStatic = {
+	function start<T>(func:Void -> T, ?context:Dynamic, ?scheduler:IScheduler):Observable<T>;
+	@:overload(function<T1, TResult>(func:T1 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> Observable<TResult> { })
+	@:overload(function<T1, TResult>(func:?T1 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):?T1 -> Observable<TResult> { })
+	@:overload(function<T1, TResult>(func:haxe.extern.Rest<T1> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):haxe.extern.Rest<T1> -> Observable<TResult> { })
+	@:overload(function<T1, T2, TResult>(func:T1 -> T2 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> Observable<TResult> { })
+	@:overload(function<T1, T2, TResult>(func:T1 -> ?T2 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> ?T2 -> Observable<TResult> { })
+	@:overload(function<T1, T2, TResult>(func:?T1 -> ?T2 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):?T1 -> ?T2 -> Observable<TResult> { })
+	@:overload(function<T1, T2, TResult>(func:T1 -> haxe.extern.Rest<T2> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> haxe.extern.Rest<T2> -> Observable<TResult> { })
+	@:overload(function<T1, T2, TResult>(func:?T1 -> haxe.extern.Rest<T2> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):?T1 -> haxe.extern.Rest<T2> -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, TResult>(func:T1 -> T2 -> T3 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> T3 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, TResult>(func:T1 -> T2 -> ?T3 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> ?T3 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, TResult>(func:T1 -> ?T2 -> ?T3 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> ?T2 -> ?T3 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, TResult>(func:?T1 -> ?T2 -> ?T3 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):?T1 -> ?T2 -> ?T3 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, TResult>(func:T1 -> T2 -> haxe.extern.Rest<T3> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> haxe.extern.Rest<T3> -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, TResult>(func:T1 -> ?T2 -> haxe.extern.Rest<T3> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> ?T2 -> haxe.extern.Rest<T3> -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, TResult>(func:?T1 -> ?T2 -> haxe.extern.Rest<T3> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):?T1 -> ?T2 -> haxe.extern.Rest<T3> -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:T1 -> T2 -> T3 -> T4 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> T3 -> T4 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:T1 -> T2 -> T3 -> ?T4 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> T3 -> ?T4 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:T1 -> T2 -> ?T3 -> ?T4 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> ?T3 -> ?T4 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:T1 -> ?T2 -> ?T3 -> ?T4 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> ?T2 -> ?T3 -> ?T4 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:?T1 -> ?T2 -> ?T3 -> ?T4 -> TResult, ?context:Dynamic, ?scheduler:IScheduler):?T1 -> ?T2 -> ?T3 -> ?T4 -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:T1 -> T2 -> T3 -> haxe.extern.Rest<T4> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> T3 -> haxe.extern.Rest<T4> -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:T1 -> T2 -> ?T3 -> haxe.extern.Rest<T4> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> T2 -> ?T3 -> haxe.extern.Rest<T4> -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:T1 -> ?T2 -> ?T3 -> haxe.extern.Rest<T4> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):T1 -> ?T2 -> ?T3 -> haxe.extern.Rest<T4> -> Observable<TResult> { })
+	@:overload(function<T1, T2, T3, T4, TResult>(func:?T1 -> ?T2 -> ?T3 -> haxe.extern.Rest<T4> -> TResult, ?context:Dynamic, ?scheduler:IScheduler):?T1 -> ?T2 -> ?T3 -> haxe.extern.Rest<T4> -> Observable<TResult> { })
+	function toAsync<TResult>(func:Void -> TResult, ?context:Dynamic, ?scheduler:IScheduler):Void -> Observable<TResult>;
+};

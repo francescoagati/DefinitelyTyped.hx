@@ -1,0 +1,114 @@
+extern class ItemFileReadStore extends dojo.Evented {
+	function new(keywordParameters:Dynamic):Void;
+	var clearOnClose : Bool;
+	var data : Dynamic;
+	var failOk : Bool;
+	var hierarchical : Bool;
+	var typeMap : Dynamic;
+	var url : String;
+	var urlPreventCache : Bool;
+	@:overload(function(request:Dynamic):Void { })
+	function close(request:dojo.data.api.Request):Void;
+	function containsValue(item:dojo.data.api.Item, attribute:String, value:Dynamic):Dynamic;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function errorHandler(errorData:Dynamic, requestObject:Dynamic):Void;
+	function fetch(request:Dynamic):Void;
+	function fetchHandler(items:Array<Dynamic>, requestObject:Dynamic):Void;
+	function fetchItemByIdentity(keywordArgs:Dynamic):Void;
+	function filter(requestArgs:Dynamic, arrayOfItems:Array<Dynamic>, findCallback:haxe.Constraints.Function):Void;
+	function getAttributes(item:dojo.data.api.Item):Array<Dynamic>;
+	function getFeatures():Dynamic;
+	function getIdentity(item:dojo.data.api.Item):Dynamic;
+	function getIdentityAttributes(item:dojo.data.api.Item):Dynamic;
+	function getLabel(item:dojo.data.api.Item):Dynamic;
+	function getLabelAttributes(item:dojo.data.api.Item):Dynamic;
+	function getValue(item:dojo.data.api.Item, attribute:String, defaultValue:Dynamic):Dynamic;
+	function getValues(item:dojo.data.api.Item, attribute:String):Dynamic;
+	function hasAttribute(item:dojo.data.api.Item, attribute:String):Bool;
+	function isItem(something:Dynamic):Bool;
+	function isItemLoaded(something:Dynamic):Dynamic;
+	function loadItem(keywordArgs:Dynamic):Void;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+}
+extern class ObjectStore extends dojo.Evented {
+	function new(options:Dynamic):Void;
+	var labelProperty : String;
+	var objectStore : Dynamic;
+	function changing(object:Dynamic, _deleting:Bool):Void;
+	function close(request:Dynamic):Dynamic;
+	function containsValue(item:Dynamic, attribute:String, value:Dynamic):Bool;
+	function deleteItem(item:Dynamic):Void;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function fetch(args:Dynamic):Dynamic;
+	function fetchItemByIdentity(args:Dynamic):Dynamic;
+	function getAttributes(item:Dynamic):Array<Dynamic>;
+	function getFeatures():Dynamic;
+	function getIdentity(item:Dynamic):Dynamic;
+	function getIdentityAttributes(item:Dynamic):Array<Dynamic>;
+	function getLabel(item:dojo.data.api.Item):Dynamic;
+	function getLabelAttributes(item:dojo.data.api.Item):Array<Dynamic>;
+	function getValue(item:Dynamic, property:String, defaultValue:Dynamic):Dynamic;
+	function getValues(item:Dynamic, property:String):Array<Dynamic>;
+	function hasAttribute(item:Dynamic, attribute:String):Bool;
+	function isDirty(item:Dynamic):Dynamic;
+	function isItem(item:Dynamic):Bool;
+	function isItemLoaded(item:Dynamic):Dynamic;
+	function loadItem(args:Dynamic):Dynamic;
+	function newItem(data:Dynamic, parentInfo:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function revert():Void;
+	function save(kwArgs:Dynamic):Void;
+	function setValue(item:Dynamic, attribute:Dynamic, value:Dynamic):Void;
+	function setValues(item:Dynamic, attribute:Dynamic, values:Dynamic):Void;
+	function unsetAttribute(item:Dynamic, attribute:Dynamic):Void;
+	function onDelete():Void;
+	function onFetch(results:Dynamic):Void;
+	function onNew():Void;
+	function onSet():Void;
+}
+extern class ItemFileWriteStore extends dojo.data.ItemFileReadStore {
+	function new(keywordParameters:Dynamic):Void;
+	var clearOnClose : Bool;
+	var data : Dynamic;
+	var failOk : Bool;
+	var hierarchical : Bool;
+	var referenceIntegrity : Bool;
+	var typeMap : Dynamic;
+	var url : String;
+	var urlPreventCache : Bool;
+	function close(request:Dynamic):Void;
+	function containsValue(item:dojo.data.api.Item, attribute:String, value:Dynamic):Dynamic;
+	function deleteItem(item:dojo.data.api.Item):Bool;
+	function emit(type:Dynamic, event:Dynamic):Dynamic;
+	function errorHandler(errorData:Dynamic, requestObject:Dynamic):Void;
+	function fetch(request:Dynamic):Void;
+	function fetchHandler(items:Array<Dynamic>, requestObject:Dynamic):Void;
+	function fetchItemByIdentity(keywordArgs:Dynamic):Void;
+	function filter(requestArgs:Dynamic, arrayOfItems:Array<Dynamic>, findCallback:haxe.Constraints.Function):Void;
+	function getAttributes(item:dojo.data.api.Item):Array<Dynamic>;
+	function getFeatures():Dynamic;
+	function getIdentity(item:dojo.data.api.Item):Dynamic;
+	function getIdentityAttributes(item:dojo.data.api.Item):Dynamic;
+	function getLabel(item:dojo.data.api.Item):Dynamic;
+	function getLabelAttributes(item:dojo.data.api.Item):Dynamic;
+	function getValue(item:dojo.data.api.Item, attribute:String, defaultValue:Dynamic):Dynamic;
+	function getValues(item:dojo.data.api.Item, attribute:String):Dynamic;
+	function hasAttribute(item:dojo.data.api.Item, attribute:String):Bool;
+	function isDirty(item:Dynamic):Dynamic;
+	function isItem(something:Dynamic):Bool;
+	function isItemLoaded(something:Dynamic):Dynamic;
+	function loadItem(keywordArgs:Dynamic):Void;
+	function newItem(keywordArgs:Dynamic, parentInfo:Dynamic):Dynamic;
+	function on(type:Dynamic, listener:Dynamic):Dynamic;
+	function revert():Bool;
+	function save(keywordArgs:Dynamic):Void;
+	function setValue(item:dojo.data.api.Item, attribute:String, value:Dynamic):Dynamic;
+	function setValues(item:dojo.data.api.Item, attribute:String, values:Array<Dynamic>):Dynamic;
+	function unsetAttribute(item:dojo.data.api.Item, attribute:String):Dynamic;
+	function onDelete(deletedItem:dojo.data.api.Item):Void;
+	function onNew(newItem:dojo.data.api.Item, parentInfo:Dynamic):Void;
+	@:overload(function(item:dojo.data.api.Item, attribute:String, oldValue:Array<Dynamic>, newValue:Dynamic):Void { })
+	@:overload(function(item:dojo.data.api.Item, attribute:String, oldValue:Dynamic, newValue:Array<Dynamic>):Void { })
+	@:overload(function(item:dojo.data.api.Item, attribute:String, oldValue:Array<Dynamic>, newValue:Array<Dynamic>):Void { })
+	function onSet(item:dojo.data.api.Item, attribute:String, oldValue:Dynamic, newValue:Dynamic):Void;
+}

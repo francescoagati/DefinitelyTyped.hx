@@ -1,0 +1,9 @@
+typedef Apply = { };
+typedef Destroy = { };
+typedef Draw = { };
+typedef GetBBox = { };
+typedef GetType = { };
+typedef Initialize = { };
+typedef Serialize = { };
+typedef Type = { };
+typedef PreexistingAnnotation = { };
